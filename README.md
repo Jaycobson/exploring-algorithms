@@ -6,11 +6,11 @@ This project implements **Linear Regression from scratch** using **Python and Nu
 
 ## 📋 Table of Contents
 
-1. [Overview]
-2. [Features]
-3. [Mathematics Behind Linear Regression]
-4. [Code Explanation]
-5. [Example Usage]  
+1. Overview
+2. Features
+3. Mathematics Behind Linear Regression
+4. Code Explanation
+5. Example Usage 
 
 
 ---
@@ -40,11 +40,11 @@ The code provides a minimalistic, clean implementation of **multiple linear regr
 
 The **linear regression model** attempts to fit a linear equation to the given data:
 
-$$ \[y = \theta_0 + \theta_1 x_1 + \theta_2 x_2 + \ldots + \theta_n x_n\] $$
+$$ y = \theta_0 + \theta_1 x_1 + \theta_2 x_2 + \ldots + \theta_n x_n $$
 
 Where:
-- \(y\) is the target value  
-- \(\theta_0\) is the intercept  
+- y is the target value  
+- $ \(\theta_0\) $ is the intercept  
 - \(\theta_1, \theta_2, \ldots\) are the coefficients  
 
 Using the **normal equation**, the optimal coefficients can be computed as:
