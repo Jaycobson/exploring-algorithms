@@ -44,7 +44,7 @@ $$ y = \theta_0 + \theta_1 x_1 + \theta_2 x_2 + \ldots + \theta_n x_n $$
 
 Where:
 - y is the target value  
-- $ \theta_0\ $ is the intercept  
+- $ \theta_0 $ is the intercept  
 - \(\theta_1, \theta_2, \ldots\) are the coefficients  
 
 Using the **normal equation**, the optimal coefficients can be computed as:
