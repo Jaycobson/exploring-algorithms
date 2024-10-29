@@ -6,15 +6,12 @@ This project implements **Linear Regression from scratch** using **Python and Nu
 
 ## 📋 Table of Contents
 
-1. [Overview](#overview)  
-2. [Features](#features)  
-3. [Mathematics Behind Linear Regression](#mathematics-behind-linear-regression)  
-4. [How to Use](#how-to-use)  
-5. [Code Explanation](#code-explanation)  
-6. [Example Usage](#example-usage)  
-7. [Results](#results)  
-8. [Contributing](#contributing)  
-9. [License](#license)
+1. [Overview]
+2. [Features]
+3. [Mathematics Behind Linear Regression]
+4. [Code Explanation]
+5. [Example Usage]  
+
 
 ---
 
@@ -43,9 +40,7 @@ The code provides a minimalistic, clean implementation of **multiple linear regr
 
 The **linear regression model** attempts to fit a linear equation to the given data:
 
-\[
-y = \theta_0 + \theta_1 x_1 + \theta_2 x_2 + \ldots + \theta_n x_n
-\]
+$$ \[y = \theta_0 + \theta_1 x_1 + \theta_2 x_2 + \ldots + \theta_n x_n\] $$
 
 Where:
 - \(y\) is the target value  
@@ -65,91 +60,6 @@ Using the **normal equation**, the optimal coefficients can be computed as:
 ### Prerequisites
 - Python 3.x
 - NumPy library (`pip install numpy`)
-
-### Steps
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/your-username/linear-regression-scratch.git
-   cd linear-regression-scratch
-
-python lr.py
-
-
-
-Sure! Below is the README content in Markdown format, ready to be copied into your README.md file for your GitHub repository:
-
-markdown
-Copy code
-# Linear Regression from Scratch 🧮
-
-This project implements **Linear Regression from scratch** using **Python and NumPy**. The goal is to understand how linear regression works at a mathematical level by implementing it without relying on high-level machine learning libraries like `scikit-learn`.  
-
----
-
-## 📋 Table of Contents
-
-1. [Overview](#overview)  
-2. [Features](#features)  
-3. [Mathematics Behind Linear Regression](#mathematics-behind-linear-regression)  
-4. [How to Use](#how-to-use)  
-5. [Code Explanation](#code-explanation)  
-6. [Example Usage](#example-usage)  
-7. [Results](#results)  
-8. [Contributing](#contributing)  
-9. [License](#license)
-
----
-
-## 🧐 Overview
-
-Linear Regression is a **simple but powerful algorithm** used to predict continuous values. This project demonstrates how to:
-
-- Compute the **optimal coefficients** for the linear model using the **normal equation**.  
-- **Make predictions** on new data.  
-- Evaluate the model using the **R-squared metric**.  
-
-The code provides a minimalistic, clean implementation of **multiple linear regression** from scratch.
-
----
-
-## ✨ Features
-
-- **Linear regression model** with coefficient estimation via **closed-form solution** (Normal Equation).  
-- **Prediction function** to generate predictions for new data points.  
-- **R-squared metric** to evaluate model performance.  
-- No external ML libraries used – only **NumPy**!
-
----
-
-## 🧑‍🏫 Mathematics Behind Linear Regression
-
-The **linear regression model** attempts to fit a linear equation to the given data:
-
-\[
-y = \theta_0 + \theta_1 x_1 + \theta_2 x_2 + \ldots + \theta_n x_n
-\]
-
-Where:
-- \(y\) is the target value  
-- \(\theta_0\) is the intercept  
-- \(\theta_1, \theta_2, \ldots\) are the coefficients  
-
-Using the **normal equation**, the optimal coefficients can be computed as:
-
-\[
-\hat{\theta} = (X^T X)^{-1} X^T y
-\]
-
----
-
-## 🚀 How to Use
-
-### Prerequisites
-- Python 3.x
-- NumPy library (`pip install numpy`)
-
-### Steps
 
 class LinearRegression:
     def __init__(self):
