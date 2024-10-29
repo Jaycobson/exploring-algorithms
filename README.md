@@ -65,7 +65,7 @@ def fit(self, X, y):
     self.coef = XTX_inv.dot(XTy)
 ```
     
-fit: This method calculates the coefficients using the normal equation. A column of ones is added to the input data to represent the intercept term.
+Fit: This method calculates the coefficients using the normal equation. A column of ones is added to the input data to represent the intercept term.
 
 ```python
 def predict(self, X):
@@ -74,7 +74,7 @@ def predict(self, X):
     return X.dot(self.coef)
 ```
 
-predict: Predicts target values for new input data based on the learned coefficients.
+Predict: Predicts target values for new input data based on the learned coefficients.
 
 ```python
 def rsquared(self, X, y):
@@ -84,28 +84,34 @@ def rsquared(self, X, y):
     return 1 - (ss_residual / ss_total)
 ```
 
-rsquared: Computes the R-squared value to evaluate how well the model fits the data.
+Rsquared: Computes the R-squared value to evaluate how well the model fits the data.
 
 
 ### 💻 Example Usage
 
 import numpy as np
+
 from linear_regression import LinearRegression
 
-# Initialize the model
+### Initialize the model
+
 lr = LinearRegression()
 
-# Training data (X: features, y: target)
+### Training data (X: features, y: target)
+
 X = np.array([[2, 2, 3], [1, 3, 4], [4, 2, 5]])
 y = np.array([3, 7, 5])
 
-# Fit the model to the data
+### Fit the model to the data
+
 lr.fit(X, y)
 
-# Make predictions on new data
+### Make predictions on new data
+
 pred = lr.predict([[3, 5, 3]])
 print(f"Prediction: {pred}")
 
-# Evaluate the model with R-squared
+### Evaluate the model with R-squared
+
 r2 = lr.rsquared(X, y)
 print(f"R-squared: {r2}")
