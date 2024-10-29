@@ -42,34 +42,19 @@ The **linear regression model** attempts to fit a linear equation to the given d
 
 $$ y = \theta_0 + \theta_1 x_1 + \theta_2 x_2 + \ldots + \theta_n x_n $$
 
-Where:
-- y is the target value  
-- $$ \theta_0 $$ is the intercept  
-- \(\theta_1, \theta_2, \ldots\) are the coefficients  
+### Breakdown
 
-Using the **normal equation**, the optimal coefficients can be computed as:
-
-\[
-\hat{\theta} = (X^T X)^{-1} X^T y
-\]
-
----
-
-## 🚀 How to Use
-
-### Prerequisites
-- Python 3.x
-- NumPy library (`pip install numpy`)
-
+```python
 class LinearRegression:
     def __init__(self):
         self.intercept = None
         self.coef = None
         
+```
+
 __init__: Initializes the intercept and coefficients to None.
 
-
-
+```python
 def fit(self, X, y):
     ones = np.ones((len(X), 1))
     X = np.concatenate((ones, X), axis=1)
@@ -78,29 +63,32 @@ def fit(self, X, y):
     XTX_inv = np.linalg.inv(XTX)
     XTy = XT.dot(y)
     self.coef = XTX_inv.dot(XTy)
+```
     
 fit: This method calculates the coefficients using the normal equation. A column of ones is added to the input data to represent the intercept term.
 
-
+```python
 def predict(self, X):
     ones = np.ones((len(X), 1))
     X = np.concatenate((ones, X), axis=1)
     return X.dot(self.coef)
+```
 
-    
 predict: Predicts target values for new input data based on the learned coefficients.
 
-
+```python
 def rsquared(self, X, y):
     ypred = self.predict(X)
     ss_total = np.sum((y - np.mean(y))**2)
     ss_residual = np.sum((y - ypred)**2)
     return 1 - (ss_residual / ss_total)
+```
 
-    
 rsquared: Computes the R-squared value to evaluate how well the model fits the data.
 
-💻 Example Usage
+
+### 💻 Example Usage
+
 import numpy as np
 from linear_regression import LinearRegression
 
